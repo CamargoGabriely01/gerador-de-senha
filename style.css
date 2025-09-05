@@ -15,3 +15,245 @@
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--roboto);
+  color: var(--branco);
+  background-color: var(--cor-de-fundo);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.titulo-principal {
+  font-family: var(--roboto-mono);
+  font-size: 2rem;
+  color: var(--branco);
+  text-align: center;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.titulo-secundario {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--branco);
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.conteudo-titulo {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.conteudo-senha {
+  background: var(--fundo-senha);
+  padding: 40px;
+  border-radius: 8px;
+  border: 3px solid var(--borda);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.conteudo-senha:hover {
+  transform: translateY(-10px);
+}
+
+#campo-senha {
+  background-color: var(--fundo-senha);
+  border: none;
+  color: var(--branco);
+  font-family: var(--roboto-mono);
+  font-size: 2.5rem;
+  width: 80%;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#campo-senha:focus {
+  box-shadow: 0 0 10px var(--borda);
+  background-color: var(--fundo-senha);
+}
+
+.parametro {
+  background-color: var(--fundo-texto);
+  border: 2px solid var(--borda);
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.parametro-titulo {
+  font-family: var(--roboto-mono);
+  font-size: 1.75rem;
+  color: var(--branco);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.parametro-senha__titulo {
+  font-size: 1.4rem;
+  color: var(--branco);
+  margin-bottom: 16px;
+}
+
+.parametro-coluna__senha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.parametro-senha {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.parametro-senha-botoes {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.parametro-senha__botao {
+  background-color: var(--fundo-texto);
+  color: var(--branco);
+  border: 2px solid var(--borda);
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.parametro-senha__botao:hover {
+  background-color: var(--borda);
+  transform: translateY(-5px);
+}
+
+.parametro-senha__botao:active {
+  transform: translateY(2px);
+}
+
+.parametro-senha__texto {
+  padding: 24px;
+  border-top: 2px solid var(--borda);
+  border-bottom: 2px solid var(--borda);
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--branco);
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--branco);
+  margin-right: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.barra {
+  background-color: var(--fundo-senha);
+  height: 30px;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.forca {
+  height: 30px;
+  position: relative;
+  bottom: 30px;
+  border-radius: 15px;
+  transition: width 0.3s ease;
+}
+
+.fraca {
+  width: 25%;
+  background-color: var(--rosa);
+  border-radius: 15px;
+}
+
+.media {
+  background-color: var(--roxo-claro);
+  width: 50%;
+  border-radius: 15px;
+}
+
+.forte {
+  background-color: var(--azul);
+  width: 100%;
+  border-radius: 15px;
+}
+
+.parametro-senha-textos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .parametro-coluna__senha {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo-principal {
+    font-size: 1.5rem;
+  }
+  
+  .titulo-secundario {
+    font-size: 1.2rem;
+  }
+  
+  .conteudo-senha {
+    padding: 20px;
+  }
+  
+  #campo-senha {
+    width: 90%;
+    font-size: 2rem;
+  }
+  
+  .parametro {
+    padding: 16px;
+  }
+  
+  .parametro-senha__botao {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
